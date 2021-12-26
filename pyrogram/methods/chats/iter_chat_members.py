@@ -128,12 +128,9 @@ class IterChatMembers(Scaffold):
                 offset += len(chat_members)
 
                 for chat_member in chat_members:
-                    user_id = None
-                    if not chat_member.user:
-                        pass
                     if chat_member.user:
                         user_id = chat_member.user.id
-
+    
                         if user_id in yielded:
                             continue
     
@@ -145,5 +142,3 @@ class IterChatMembers(Scaffold):
     
                         if current >= total:
                             return
-                    else:
-                        continue
